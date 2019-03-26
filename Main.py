@@ -46,7 +46,7 @@ def writefile(t1,t2,t3,i,name,id):
                      'Когда:'+t3+'\n'+
                     'Заявитель: '+str(name)+'\n'+'\n')
     f.close()
-
+'''
 @bot.message_handler(commands=['start'])
 def command_handler(message: Message):
     print(message.from_user.id)
@@ -63,7 +63,7 @@ def command_handler(message: Message):
                                          'Меня зовут Wooster и я теперь я твой помошник, просто попроси меня о чем-нибудь \n')
         bot.send_message(message.chat.id, 'Вы можете оформить заявку на УАЗ/Автобус на сегодня или завтра.\n'
                                           'Напишите запрос в свободной форме,а мы попытаемся его обработать!')
-
+'''
 
 @bot.message_handler(content_types=['text'])
 @bot.edited_message_handler(content_types=['text'])
