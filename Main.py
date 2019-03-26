@@ -3,14 +3,14 @@ import time
 import telebot
 from telebot.types import Message
 print("SEX")
+
 def ReadUser():
     global USERS
-    j=0
     f = open('Users.txt','r')
     line = f.readline()
     while line:
         print('v baze: '+line) #
-        USERS.add(int(line[0:len(line-1)])
+        USERS.add(int(line[0:len(line)-1])
         line = f.readline()
     return
 
