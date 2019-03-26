@@ -18,6 +18,7 @@ STICKER_ID = 'CAADAgADXwMAAgw7AAEKTh8jAAH9Q-gAAQI'
 
 bot = telebot.TeleBot(TOKEN)
 i=0
+bot.send_message(260119686,'я жив')
 USERS = set()
 def AddUsers(s):
     f = open('Users.txt', 'a')
