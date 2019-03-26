@@ -10,7 +10,7 @@ def ReadUser():
     line = f.readline()
     while line:
         print('v baze: '+line) #
-        USERS.add(int(line))
+        USERS.add(int(line[0:len(line-1))
         line = f.readline()
     return
 
@@ -49,14 +49,14 @@ def writefile(t1,t2,t3,i,name,id):
 
 @bot.message_handler(commands=['start'])
 def command_handler(message: Message):
-    ReadUser()
     print(message.from_user.id)
     if message.from_user.id in USERS:
         bot.send_message(message.chat.id,'Вы уже зарегистрированы! \n'
                                          'Вы можете оформить заявку на УАЗ/Автобус на сегодня или завтра.\n'
                                         'Напишите запрос в свободной форме,а мы попытаемся его обработать!')
     else:
-        print(message.from_user.id) #
+        print(str(message.from_user.id)+'ne naideno') #
+        ReadUser()
         USERS.add(message.from_user.id)
         AddUsers(message.from_user.id)# + '; name: ' + str(message.from_user.first_name)+' '+ str(message.from_user.last_name) + '; Зарегистрирован: '+str(message.date))
         bot.send_message(message.chat.id,'Ура, теперь вы с нами! \n'
