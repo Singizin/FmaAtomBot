@@ -10,7 +10,7 @@ def ReadUser():
     line = f.readline()
     while line:
         print('v baze: '+line) #
-        USERS.add(line)
+        USERS.add(int(line))
         line = f.readline()
     return
 
@@ -25,7 +25,7 @@ bot.send_message(260119686,'я жив')
 USERS = set()
 def AddUsers(s):
     f = open('Users.txt', 'a')
-    f.write(s+'\n')
+    f.write(str(s)+'\n')
     f.close()
 
 def error(s):
