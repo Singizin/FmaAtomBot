@@ -6,11 +6,9 @@ print("SEX")
 
 def ReadUser():
     global USERS
-    print('чи')
     f = open('Users.txt','r')
     line = f.readline()
     while line:
-        print('зас') #
         USERS.add(int(line[0:9]))
         line = f.readline()
     return
@@ -24,6 +22,7 @@ i=0
 bot.send_message(260119686,'я жив')
 
 USERS = set()
+
 def AddUsers(s):
     f = open('Users.txt', 'a')
     f.write(str(s)+'\n')
@@ -59,7 +58,7 @@ def command_handler(message: Message):
         print(str(message.from_user.id)+'ne naideno') #
         ReadUser()
         USERS.add(message.from_user.id)
-        AddUsers(message.from_user.id)# + '; name: ' + str(message.from_user.first_name)+' '+ str(message.from_user.last_name) + '; Зарегистрирован: '+str(message.date))
+        AddUsers(str(message.from_user.id) + '; name: ' + str(message.from_user.first_name)+' '+ str(message.from_user.last_name) + '; Зарегистрирован: '+str(message.date))
         bot.send_message(message.chat.id,'Ура, теперь вы с нами! \n'
                                          'Меня зовут Wooster и я теперь я твой помошник, просто попроси меня о чем-нибудь \n')
         bot.send_message(message.chat.id, 'Вы можете оформить заявку на УАЗ/Автобус на сегодня или завтра.\n'
