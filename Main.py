@@ -21,7 +21,6 @@ bot = telebot.TeleBot(TOKEN)
 i=0
 
 bot.send_message(260119686,'я жив')
-bot.send_message(469061808,'это сообщение оправлено при запуске кода бота на сервере в эмторнете. Всего хорошего!')
 
 USERS = set()
 def AddUsers(s):
