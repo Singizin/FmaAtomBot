@@ -10,7 +10,7 @@ def ReadUser():
     line = f.readline()
     while line:
         print('v baze: '+line) #
-        USERS.add(int(line[0:len(line-1))
+        USERS.add(int(line[0:len(line-1)])
         line = f.readline()
     return
 
