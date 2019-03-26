@@ -6,10 +6,11 @@ print("SEX")
 
 def ReadUser():
     global USERS
+    print('чи')
     f = open('Users.txt','r')
     line = f.readline()
     while line:
-        print('v baze: '+line) #
+        print('зас') #
         USERS.add(int(line[0:9]))
         line = f.readline()
     return
