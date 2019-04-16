@@ -20,6 +20,7 @@ bot = telebot.TeleBot(TOKEN)
 i=0
 
 bot.send_message(260119686,'я жив')
+bot.send_photo(260119686, 'files/1.jpg')
 
 USERS = set()
 
