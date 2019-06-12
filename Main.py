@@ -2,7 +2,12 @@
 import time
 import telebot
 from telebot.types import Message
-print("SEX")
+import os
+import psycopg2
+
+DATABASE_URL = os.environ['postgres://lmujffhuwvdwlq:b5831431d3051c1d92186990331a34506481c652cf5fd52f0c56aad5a12b87b6@ec2-46-137-113-157.eu-west-1.compute.amazonaws.com:5432/d43638j1mqjsms']
+
+conn = psycopg2.connect(DATABASE_URL, sslmode='require')
 
 def ReadUser():
     global USERS
